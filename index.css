@@ -27,3 +27,13 @@ form {
     display: grid;
     background-color: lightblue;
 }
+
+input#post-title, textarea#post-body {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
