@@ -26,12 +26,21 @@ fetch("https://apis.scrimba.com/placeholder/posts")
     })
 
 
+document.getElementById("new-post").addEventListener("submit", function(e){
+    e.preventDefault()
+    const postTitle = document.getElementById("post-title").value 
+    const postBody = document.getElementById("post-body").value
 
-let options = {
-    title: postTitle,
-    body: postBody
-}
+    let postData = {
+        title: postTitle,
+        body: postBody
+    }
+})
 
 
-fetch("https://apis.scrimba.com/placeholder/posts")
+
+fetch("https://apis.scrimba.com/placeholder/posts", {
+    method: "POST",
+    body: JSON.stringify()
+})
 
