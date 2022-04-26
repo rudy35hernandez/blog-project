@@ -31,16 +31,23 @@ document.getElementById("new-post").addEventListener("submit", function(e){
     const postTitle = document.getElementById("post-title").value 
     const postBody = document.getElementById("post-body").value
 
-    let postData = {
+    const data = {
         title: postTitle,
         body: postBody
     }
+
+    const option = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    
+    }
+
+
+    fetch("https://apis.scrimba.com/placeholder/posts", option)
+        .then(request => request.json())
+        .then(data => console.log(data))
+
 })
-
-
-
-fetch("https://apis.scrimba.com/placeholder/posts", {
-    method: "POST",
-    body: JSON.stringify()
-})
-
