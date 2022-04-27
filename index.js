@@ -10,9 +10,9 @@
 //     }
 // }
 
-fetch("https://apis.scrimba.com/placeholder/posts")
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(request => request.json())
-    .then(post => {
+    .then(data => {
         const postsArr = data.slice(0, 5)
         let html = ""
         for(post of postsArr){
@@ -46,7 +46,7 @@ document.getElementById("new-post").addEventListener("submit", function(e){
     }
 
 
-    fetch("https://apis.scrimba.com/placeholder/posts", option)
+    fetch("https://apis.scrimba.com/jsonplaceholder/posts", option)
         .then(request => request.json())
         .then(data => console.log(data))
 
