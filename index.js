@@ -11,7 +11,7 @@
 // }
 
 fetch("https://apis.scrimba.com/placeholder/posts")
-    .then(requests => requests.json())
+    .then(request => request.json())
     .then(post => {
         const postsArr = data.slice(0, 5)
         let html = ""
