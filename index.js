@@ -48,6 +48,13 @@ document.getElementById("new-post").addEventListener("submit", function(e){
 
     fetch("https://apis.scrimba.com/jsonplaceholder/posts", option)
         .then(request => request.json())
-        .then(data => console.log(data))
+        .then(post => {
+            document.getElementById("blog-list").innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${post.body}</p>
+            <hr />
+            ${document.getElementById("blog-list").innerHTML}
+            `
+        })
 
 })
