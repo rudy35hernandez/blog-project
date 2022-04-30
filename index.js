@@ -20,8 +20,9 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
         renderPosts()
     })
 
+const newPostForm = document.getElementById("new-post")
 
-document.getElementById("new-post").addEventListener("submit", function(e){
+newPostForm.addEventListener("submit", function(e){
     e.preventDefault()
     const postTitle = document.getElementById("post-title").value 
     const postBody = document.getElementById("post-body").value
@@ -46,6 +47,7 @@ document.getElementById("new-post").addEventListener("submit", function(e){
         .then(post => {
             postsArr.unshift(post)
             renderPosts()
+            newPostForm.reset()
         })
 
 })
